@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sharedNative-android">
+    <output-path>$PROJECT_DIR$/sharedNative/build/libs</output-path>
+    <root id="archive" name="sharedNative-android.jar">
+      <element id="module-output" name="sharedNative_androidMain" />
+    </root>
+  </artifact>
+</component>

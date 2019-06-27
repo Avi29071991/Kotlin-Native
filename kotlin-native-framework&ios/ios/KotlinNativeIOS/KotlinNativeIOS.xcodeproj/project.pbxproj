@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C001E93F2297765200F9F80F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C001E93E2297765200F9F80F /* Images.xcassets */; };
+		C001E9462297A1D200F9F80F /* CustomWeatherTile.xib in Resources */ = {isa = PBXBuildFile; fileRef = C001E9452297A1D200F9F80F /* CustomWeatherTile.xib */; };
+		C001E9482297A3F900F9F80F /* CustomWeatherTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C001E9472297A3F900F9F80F /* CustomWeatherTile.swift */; };
+		C05408672296700C008CB815 /* IOSDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05408662296700C008CB815 /* IOSDependencyManager.swift */; };
+		C0878613228E9F80001CF9D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0878612228E9F80001CF9D7 /* AppDelegate.swift */; };
+		C0878615228E9F80001CF9D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0878614228E9F80001CF9D7 /* ViewController.swift */; };
+		C0878618228E9F80001CF9D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0878616228E9F80001CF9D7 /* Main.storyboard */; };
+		C087861A228E9F85001CF9D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0878619228E9F85001CF9D7 /* Assets.xcassets */; };
+		C087861D228E9F85001CF9D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C087861B228E9F85001CF9D7 /* LaunchScreen.storyboard */; };
+		C0878625228E9FBE001CF9D7 /* KotlinShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0878624228E9FBE001CF9D7 /* KotlinShared.framework */; };
+		C0878626228E9FBE001CF9D7 /* KotlinShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0878624228E9FBE001CF9D7 /* KotlinShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0878627228E9FBE001CF9D7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C0878626228E9FBE001CF9D7 /* KotlinShared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C001E93E2297765200F9F80F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C001E9452297A1D200F9F80F /* CustomWeatherTile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomWeatherTile.xib; sourceTree = "<group>"; };
+		C001E9472297A3F900F9F80F /* CustomWeatherTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWeatherTile.swift; sourceTree = "<group>"; };
+		C05408662296700C008CB815 /* IOSDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSDependencyManager.swift; sourceTree = "<group>"; };
+		C087860F228E9F80001CF9D7 /* KotlinNativeIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinNativeIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0878612228E9F80001CF9D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C0878614228E9F80001CF9D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0878617228E9F80001CF9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0878619228E9F85001CF9D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C087861C228E9F85001CF9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C087861E228E9F85001CF9D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0878624228E9FBE001CF9D7 /* KotlinShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KotlinShared.framework; path = "../../sharedNative/build/xcode-frameworks/KotlinShared.framework"; sourceTree = "<group>"; };
+		C0878628228E9FD1001CF9D7 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C087860C228E9F80001CF9D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0878625228E9FBE001CF9D7 /* KotlinShared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C001E9402297788200F9F80F /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C001E9452297A1D200F9F80F /* CustomWeatherTile.xib */,
+				C001E9472297A3F900F9F80F /* CustomWeatherTile.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		C054086522966FF0008CB815 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				C05408662296700C008CB815 /* IOSDependencyManager.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		C0878606228E9F80001CF9D7 = {
+			isa = PBXGroup;
+			children = (
+				C001E93E2297765200F9F80F /* Images.xcassets */,
+				C0878628228E9FD1001CF9D7 /* Config.xcconfig */,
+				C0878624228E9FBE001CF9D7 /* KotlinShared.framework */,
+				C0878611228E9F80001CF9D7 /* KotlinNativeIOS */,
+				C0878610228E9F80001CF9D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0878610228E9F80001CF9D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C087860F228E9F80001CF9D7 /* KotlinNativeIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0878611228E9F80001CF9D7 /* KotlinNativeIOS */ = {
+			isa = PBXGroup;
+			children = (
+				C001E9402297788200F9F80F /* Custom Cell */,
+				C054086522966FF0008CB815 /* Dependencies */,
+				C0878612228E9F80001CF9D7 /* AppDelegate.swift */,
+				C0878614228E9F80001CF9D7 /* ViewController.swift */,
+				C0878616228E9F80001CF9D7 /* Main.storyboard */,
+				C0878619228E9F85001CF9D7 /* Assets.xcassets */,
+				C087861B228E9F85001CF9D7 /* LaunchScreen.storyboard */,
+				C087861E228E9F85001CF9D7 /* Info.plist */,
+			);
+			path = KotlinNativeIOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C087860E228E9F80001CF9D7 /* KotlinNativeIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0878621228E9F85001CF9D7 /* Build configuration list for PBXNativeTarget "KotlinNativeIOS" */;
+			buildPhases = (
+				C087860B228E9F80001CF9D7 /* Sources */,
+				C087860C228E9F80001CF9D7 /* Frameworks */,
+				C087860D228E9F80001CF9D7 /* Resources */,
+				C0878627228E9FBE001CF9D7 /* Embed Frameworks */,
+				C0878629228EA05E001CF9D7 /* Kotlin/Native */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KotlinNativeIOS;
+			productName = KotlinNativeIOS;
+			productReference = C087860F228E9F80001CF9D7 /* KotlinNativeIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0878607228E9F80001CF9D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Avinash Mandal";
+				TargetAttributes = {
+					C087860E228E9F80001CF9D7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = C087860A228E9F80001CF9D7 /* Build configuration list for PBXProject "KotlinNativeIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0878606228E9F80001CF9D7;
+			productRefGroup = C0878610228E9F80001CF9D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C087860E228E9F80001CF9D7 /* KotlinNativeIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C087860D228E9F80001CF9D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C087861D228E9F85001CF9D7 /* LaunchScreen.storyboard in Resources */,
+				C001E93F2297765200F9F80F /* Images.xcassets in Resources */,
+				C087861A228E9F85001CF9D7 /* Assets.xcassets in Resources */,
+				C001E9462297A1D200F9F80F /* CustomWeatherTile.xib in Resources */,
+				C0878618228E9F80001CF9D7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C0878629228EA05E001CF9D7 /* Kotlin/Native */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Kotlin/Native;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $SRCROOT/../../sharedNative/build/xcode-frameworks\n./gradlew :sharedNative:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C087860B228E9F80001CF9D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C001E9482297A3F900F9F80F /* CustomWeatherTile.swift in Sources */,
+				C05408672296700C008CB815 /* IOSDependencyManager.swift in Sources */,
+				C0878615228E9F80001CF9D7 /* ViewController.swift in Sources */,
+				C0878613228E9F80001CF9D7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C0878616228E9F80001CF9D7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0878617228E9F80001CF9D7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C087861B228E9F85001CF9D7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C087861C228E9F85001CF9D7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C087861F228E9F85001CF9D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C0878620228E9F85001CF9D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0878622228E9F85001CF9D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0878628228E9FD1001CF9D7 /* Config.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
+				INFOPLIST_FILE = KotlinNativeIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.westpac.avinash.kotlin.native.demo.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Westpac Wildcard - Development";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0878623228E9F85001CF9D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
+				INFOPLIST_FILE = KotlinNativeIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.westpac.avinash.kotlin.native.demo.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Westpac Wildcard - Development";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C087860A228E9F80001CF9D7 /* Build configuration list for PBXProject "KotlinNativeIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C087861F228E9F85001CF9D7 /* Debug */,
+				C0878620228E9F85001CF9D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0878621228E9F85001CF9D7 /* Build configuration list for PBXNativeTarget "KotlinNativeIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0878622228E9F85001CF9D7 /* Debug */,
+				C0878623228E9F85001CF9D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0878607228E9F80001CF9D7 /* Project object */;
+}
