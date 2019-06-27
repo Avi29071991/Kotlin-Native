@@ -9,4 +9,17 @@
 /build
 /captures
 *.xcuserdatad
+
+kotlin-native-android/.idea
+kotlin-native-android/gradlew.bat
+kotlin-native-android/gradle/wrapper
+kotlin-native-android/settings.gradle
+kotlin-native-android/gradlew
+
+kotlin-native-framework&ios/.idea
+kotlin-native-framework&ios/gradlew.bat
+kotlin-native-framework&ios/gradle/wrapper
+kotlin-native-framework&ios/settings.gradle
+kotlin-native-framework&ios/gradlew
+
 .externalNativeBuild
