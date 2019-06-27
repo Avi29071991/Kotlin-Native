@@ -7,7 +7,23 @@ Code base which shows the usage of Kotlin native framework to develop applicatio
 
 Kotlin/Native is primarily designed to allow compilation for platforms where virtual machines are not desirable or possible, for example, embedded devices or iOS. It solves the situations when a developer needs to produce a self-contained program that does not require an additional runtime or virtual machine.
 
- ### Target Platforms
+#### Following are the advantages of using Kotlin Native in mobile applicatioon development.
+
+* Unified business and presentational layers for multiple platforms.
+
+* Unit testing of business logic at one place.
+
+* Development time to develop multiplatform application is reduced.
+
+#### Architecture for kotlin native projects 
+
+![Common Codebase](screenshots/common_codebase.png)
+
+#### Datatype conversions followed specially for IOS framework:
+
+![Data types](screenshots/datatypes.png)
+
+### Target Platforms
  
 Kotlin/Native supports the following platforms:
 
@@ -35,8 +51,6 @@ Next, input
 * Save location
 * Language Kotlin
 * Minimum API level, here API 28, but anything is ok.
-
-// TODO need to add screenshot of configuring a project 
 
 Finished with the above setting.
 
@@ -193,19 +207,15 @@ In the same way, Sync Now and run this task.
 
 This command performs the sharedNative module’s packForXcode task defined above.
 
-//TODO need to add screenshot
-
 Finally, xcode-frameworks directory and the framework appears. Xcode will refer this framework.
-
-
 
 ### Setting up shared library in IOS project
 
 First, create KotlinNativeShared/ios directory and Xcode project with this configuration in it.
 
-Single View Application
-Product Name: SampleiOS
-Language: Swift
+* Single View: Application
+* Product Name: SampleiOS
+* Language: Swift
 
 ![Sample project](screenshots/sample_ios.png)
 
@@ -275,9 +285,9 @@ Check you can build successfully.
 
 ### iOS Specific Codes in Kotlin
 
-We configured K/N project previously.
+We configured Kotlin Native project previously.
 
-In this chapter, let’s create simple framework with K/N features.
+In this chapter, let’s create simple framework with Kotlin Native features.
 
 First, create iosMain/kotlin/actual.kt directories and file in the same way as we did previously.
 
@@ -317,3 +327,64 @@ expect and actual can also be used for class. This means expect annotation class
 ```
 
 **_OptionalExpectation is available in case you don’t have to add annotation for specific platform._**
+
+### Setting up shared library for Android
+
+Setting up shared library is simple compared to set up in IOS.
+
+Following steps needs to be performed while setting it up in Android:
+
+* Click on the **_'publishAndroidPublicationToMavenLocal'_** task in Gradle task of KotlinNativeShared library.
+
+![Publish for Android](screenshots/pusblish_for_android.png)
+
+* Once the task is completed we will get the following binaries inside the **_'.m2'_** folder of your user directory
+
+![Published artifacts](screenshots/published_libraires.png)
+
+* Create a new Android project sync it. Navigate to the build.gradle file inside the app folder and add following dependencies and click on sync button: 
+```
+dependencies {
+	....
+	implementation 'com.avinash.weather.lib:sharedNative-android:1.0.1'
+	....
+}
+```
+
+* Once the sync task of android project is completed successfully you should now be good to use Kotlin Native library inside in your android application as shown in the following code snippet.
+```
+import sayHelloWorld
+
+class MainActivity : AppCompatActivity() {
+	 override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        println(sayHelloWorld())
+    }
+}
+```
+
+This will print **_'Hello World Android Devs!!'_** as the getPlatform() as described above will now be defined in androidActual.kt file with the following implementation:
+#### in androidActual.kt file
+```
+actual fun getPlatform(): String {
+    return "Android"
+}
+```
+
+
+## Actual Application
+
+Steps mentioned above were some of the prerequisites required for setting up Kotlin Native for both Android and IOS platforms.
+
+We created a fully functional shared library containing network calls and presentation logic inside the shared library and UI implementation inside application code of respective libraries.
+
+Following is the demo for both the platforms:
+
+Android Demo: 
+
+![Android Demo](screenshots/android-device-2019-06-27-190214.webm)
+
+IOS Demo:
+
+![IOS demo](screenshots/ios_video.mov)
