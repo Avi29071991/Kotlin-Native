@@ -379,12 +379,6 @@ Steps mentioned above were some of the prerequisites required for setting up Kot
 
 We created a fully functional shared library containing network calls and presentation logic inside the shared library and UI implementation inside application code of respective libraries.
 
-Following is the demo for both the platforms:
+Following are the screenshots for both the platforms:
 
-Android Demo: 
-
-![Android Demo](screenshots/android-device-2019-06-27-190214.webm)
-
-IOS Demo:
-
-![IOS demo](screenshots/ios_video.mov)
+![Android Screenshot](screenshots/android-screenshot.png) ![IOS Screenshot](screenshots/Ios-screenshot.png)
