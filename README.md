@@ -30,7 +30,7 @@ Click Start a new Android Studio project, select Empty Acticity .
 
 Next, input
 
-* Application name, here KotlinNativeiOS
+* Application name, here KotlinNativeShared
 * Package name
 * Save location
 * Language Kotlin
@@ -40,13 +40,9 @@ Next, input
 
 Finished with the above setting.
 
-// TODO need to add screenshot of app_configurations
+The KotlinNativeiOS project will be opened automatically and gradle sync is performed. 
 
-The KotlinNativeiOS project will be opened automatically and gradle sync is performed. After that, you’ll see like the above image on left bar.
-
-// TODO need to add screenshot
-
-To setup directory, switch this Android tab to Project tab.
+To setup directory, switch the Android tab to Project tab.
 
 There are some directories and files. Like,
 
@@ -71,21 +67,20 @@ Then, Sync Now button appears on top. Tap it and gradle sync will start.
 
 This section’s goal is to create an iOS framework from Kotlin codes.
 
-// TODO need to add screenshots
+Right click on KotlinNativeShared directory. And select New -> Directory.
 
-Right click on KotlinNativeiOS directory. And select New -> Directory.
-
-//TODO need to add screenshots
+![Create Shared Module](screenshots/create_shared_module.png)
 
 Input sharedNative (or any name you like). This directory will become shared module.
 
-//TODO need to add screenshots
+![Create shared native directory](screenshots/create_directory_name.png)
 
 In the same way, create sharedNative/src/commonMain/kotlin directories.
 
 And create common.kt file in kotlin directory. We define helloWorld function here as below.
+![Create kotlin directory](screenshots/create_kotlin_folder.png)
 
-//TODO need to add screenshot
+![Create common.kt file](screenshots/create_common_file.png)
 
 ``` 
 fun helloWorld() {
@@ -104,10 +99,8 @@ include ':sharedNative'
 ```
 Next, create the sharedNative/build.gradle .
 ```
-
-//TODO need to add screenshot
-
-//TODO need to add screenshot
+![Create shared module build.gradle](screenshots/create_build_gradle.png)
+![Create shared module build.gradle](screenshots/create_build_gradle2.png)
 
 ```
 apply plugin: 'kotlin-multiplatform'
@@ -144,18 +137,18 @@ But, it’s ok. Go forward with presets.iosX64. You need Sync Now here.
 
 We will create the framework.
 
-Open terminal and move to KotlinNativeiOS root directory, or use Android Studio’s Terminal.
-
-//TODO need to add screenshot
+Open terminal and move to KotlinNativeShared root directory, or use Android Studio’s Terminal to navigate to root directory.
 ```
 ./gradlew :sharedNative:build
 ```
 
 gradlew command can run :Module ‘s :task . The above will perform building sharedNative module.
-
-//TODO need to add screenshots
+![Build Shared native module](screenshots/after_compile.png)
 
 We found debug and release directories in sharedNative/build/bin/ios directory. Each has .framework in it. Frameworks are created 🎉.
+
+![Frameworks generated](screenshots/after_compile2.png)
+
 ```
 ext.ios_framework_name = 'KotlinShared'
 ```
@@ -204,15 +197,17 @@ This command performs the sharedNative module’s packForXcode task defined abov
 
 Finally, xcode-frameworks directory and the framework appears. Xcode will refer this framework.
 
+
+
 ### Setting up shared library in IOS project
 
-First, create KotlinNativeiOS/ios directory and Xcode project with this configuration in it.
+First, create KotlinNativeShared/ios directory and Xcode project with this configuration in it.
 
 Single View Application
-Product Name: KotlinNativeiOS
+Product Name: SampleiOS
 Language: Swift
 
-//TODO need to add screenshot
+![Sample project](screenshots/sample_ios.png)
 
 ```
 Like above, .xcodeproj path is relative to sharedNative directory (framework in it). The path is $SRCROOT/../../sharedNative . Using relative path, we can configure Xcode settings with environment variables.
@@ -220,17 +215,19 @@ Like above, .xcodeproj path is relative to sharedNative directory (framework in 
 
 Kotlin Native generates dynamic framework, so embed it to binaries.
 
-//TODO need to add screenshot
+![Embedding binaries](screenshots/embedding_binaries.png)
 
 Move to Xcode project’s Generaltab. In Embedded Binaries section, tap + and click Add Other... Choose the framework in xcode-frameworks directory and create references.
 
-//TODO need to add screenshots
+![Choose binaries](screenshots/choose_shared_native_ios.png)
+![Select binaries](screenshots/select_shared_native_ios.png)
+![set binaries](screenshots/embedded_binaries.png)
 
 Finished embedding.
 
 Now we need to add this path to Framework Search Path . Here, I use xcconfig file. Right click on SampleiOS group and choose Configuration Settings File
 
-//TODO need to add screenshot
+![configurations](screenshots/configurations_xml.png)
 
 Config.xcconfig was created. Set the path.
 ```
@@ -262,7 +259,7 @@ As I mentioned above, packForXcode is the gradle task to exchange the framework 
 
 It should be run before compiling sources.
 
-//TODO need to add sceenshots
+![New run scripts](screenshots/new_run_script.png)
 
 In Build Phases, add new run script phase. It is generated as Run Script. I renamed it to Kotlin/Native. The script is the following.
 ```
@@ -272,7 +269,7 @@ cd $SRCROOT/../../sharedNative/build/xcode-frameworks
 
 Move the phase previous to the Compile Sources phase by dragging.
 
-//TODO need to add screenshots
+![Compile Sources](screenshots/compile_sources.png)
 
 Check you can build successfully.
 
@@ -284,7 +281,7 @@ In this chapter, let’s create simple framework with K/N features.
 
 First, create iosMain/kotlin/actual.kt directories and file in the same way as we did previously.
 
-//TODO need to add screenshots
+![Expect Actual](screenshots/expect_actual1.png)
 
 ### Expect and Actual Functions
 
