@@ -22,4 +22,6 @@ kotlin-native-framework&ios/gradle/wrapper
 kotlin-native-framework&ios/settings.gradle
 kotlin-native-framework&ios/gradlew
 
+kotlin-native-framework&ios/sharedNative/build
+
 .externalNativeBuild
