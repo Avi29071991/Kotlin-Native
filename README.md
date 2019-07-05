@@ -3,11 +3,11 @@ Code base which shows the usage of Kotlin native framework to develop applicatio
 
 ## Basics
 
-### Why Kotlin/Native?
+### Why Kotlin Native?
 
-Kotlin/Native is primarily designed to allow compilation for platforms where virtual machines are not desirable or possible, for example, embedded devices or iOS. It solves the situations when a developer needs to produce a self-contained program that does not require an additional runtime or virtual machine.
+Kotlin Native is primarily designed to allow compilation for platforms where virtual machines are not desirable or possible, for example, embedded devices or iOS. It solves the situations when a developer needs to produce a self-contained program that does not require an additional runtime or virtual machine.
 
-#### Following are the advantages of using Kotlin Native in mobile applicatioon development.
+#### Following are the advantages of using Kotlin Native in mobile application development.
 
 * Unified business and presentational layers for multiple platforms.
 
@@ -25,7 +25,7 @@ Kotlin/Native is primarily designed to allow compilation for platforms where vir
 
 ### Target Platforms
  
-Kotlin/Native supports the following platforms:
+Kotlin Native supports the following platforms:
 
 * iOS (arm32, arm64, simulator x86_64)
 * MacOS (x86_64)
@@ -36,7 +36,7 @@ Kotlin/Native supports the following platforms:
 
 ## Project Configuration
 
-First, start with configuring K/N project on Android Studio, ver 3.3 .
+First, start with configuring Kotlin Native project on Android Studio, ver 3.3 .
 
 ![Android Studio](screenshots/studio.png)
 
